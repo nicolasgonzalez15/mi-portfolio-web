@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    /*background-color: burlywood;*/
+}
+
+a{
+    text-decoration: none;
+    color:#000;
+}
+
+li{
+    list-style-type: none;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:1rem;
+    background-color: #f8f9fa;
+}
+
+.logo-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-img{
+    border-radius: 50%;
+}
+
+.navbar .logo-link{
+    padding-left:5px;
+}
+
+.navbar .logo-img{
+    width:32px;
+    height: 32px;
+}
+
+.nav-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item{
+    font-size: 1.5rem;
+}
+
+.nav-link{
+    padding-left:10px;
+    font-size:2rem;
+}
+
+.nav-link:hover{
+    color:#25d366;
+}
+
+
+/* Aside desktop*/
+
+.aside{
+   position: sticky;
+   top:0;
+   float: left;
+   padding:1rem 4rem;
+   /*background-color: darkseagreen;*/
+   text-align: right;
+   height: 100vh;
+   /*background-image: url(../img/portada-2.jpg);
+   background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.8));*/
+   background-image: url('../img/portada-aside-small.jpg');
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   margin-right:1rem;
+   width:600px;
+}
+
+.aside h2, .aside p{
+    color:#fff;
+    text-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.aside img{
+    object-fit: cover;
+    width: 100%;
+    height: 220px;
+    
+}
+
+.box-sticky{
+    position: sticky;
+    top:0;
+    background-color: #25d366;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+
+.datos-personales img{
+    width:120px;
+    height: 120px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    padding:5px;
+
+}
+
+.datos-personales h2{
+    padding:1rem 0;
+}
+
+.datos-personales .habilidades{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding:1rem;
+    text-align: right;
+}
+
+.barra{
+    margin:20px 0;
+}
+
+
+/*Main*/
+
+.main{
+    /*background-color: #CADDFA;*/
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.principal{
+    padding:1rem;
+}
+
+.principal h3{
+    font-size: 1.5rem;
+}
+
+.principal p{
+    padding:0.8rem 1rem;
+    font-size: 0.9rem;
+}
+
+.principal li{
+    padding-left:1rem;
+    font-size: 0.9rem;
+}
+
+
+
+/*Trabajos*/
+
+.container-trabajos {
+  /*display: flex;
+  flex-direction: row;
+  justify-content: center;*/
+  /* background-color: red;height: 100%; */
+  padding: 2rem;
+}
+
+
+.trabajos-grid{
+
+display: grid;
+grid-template-columns:repeat(auto-fit,minmax(250px, 1fr));
+grid-gap: 20px;
+justify-content: center;
+    
+
+}
+
+.trabajo{
+    padding:1rem;
+    border:1px solid #ddd;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 30px;
+    transition:transform 0.3s ease-in-out;
+}
+
+.trabajo:hover{
+    transform: scale(1.02);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.trabajo img{
+    object-fit: cover;
+    width: 100%;
+    height: 220px;
+    border-radius:15px;
+}
+
+.trabajo h3{
+    margin-bottom:5px;
+}
+
+.trabajo-link{
+    background-color: dodgerblue;
+    width:30%;
+    color: white;
+    padding: 10px 20px;
+    margin:10px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.trabajo-link:hover{
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+
+/* En mobile: altura automática según contenido */
+@media (max-width: 767.98px) {
+
+    .main{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .aside {
+        position: relative;
+        width:100%;
+        height: auto;
+        text-align: center;
+    }
+
+}
